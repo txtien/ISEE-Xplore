@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block header %}
+<header>
+    <nav id="navbar">
+        <div class="row">
+            <img src="../static/images/resources/white-logo.png" alt="logo" class="logo">
+            <ul class="main-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+</header> 
+{% endblock %}
+
+{% block content %} 
+    <div class="basic-main">
+        <div style='margin-bottom: 30px'>
+            <img src="{% if filename %}../static/images/{{filename}}{% else %}../static/images/placeholder.jpg{% endif %}" width=500 height=500 alt="image">
+            <h5 style="font-size: 170%;">Response: {{response}}</h5>
+        </div>
+        <div>
+            <a href="{{ url_for('support_begin', filename=filename) }}" style="text-decoration: none; color: #333; font-weight: bold;" class="basic-submit">Ask More</a>
+            <a href="{{ url_for('support') }}" style="text-decoration: none; color: #333; font-weight: bold;" class="basic-submit">Upload Image</a>
+        </div>
+    </div>
+{% endblock %}

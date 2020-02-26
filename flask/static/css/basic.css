@@ -1,0 +1,62 @@
+/* -------------------NAVBAR-------------*/
+#navbar {
+    background: #333;
+    color: #fff;
+    overflow: auto;
+}
+
+#navbar a {
+    color: #fff;
+}
+
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+#navbar ul li a:hover {
+    background: #E94F64;
+    color: #fff
+}
+
+/* -------------------CONTENT-------------*/
+.basic-main {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.basic-main form {
+    margin-top: 20px;
+}
+
+.basic-submit,
+.image-field {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #E94F64;
+    color: #000;
+    border: 1px solid #E94F64;
+    margin-left: 15px;
+}
+
+.basic-label {
+    font-size: 120%;
+    font-weight: 400;
+}
+
+p {
+    font-size: 150%;
+}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block header %}
+<header class="index">
+    <nav>
+        <div class="row">
+            <img src="../static/images/resources/white-logo.png" alt="logo" class="logo">
+            <ul class="main-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Demo</a></li>
+            </ul>
+        </div>
+    </nav> 
+    <div class="hero-text-box">
+        <h1>Computer Vision - Image Captioning</h1>
+        <p class="header-text">Understand Image in a human way</p>
+        <a href="#" class="btn btn-full">Show More</a>
+        <a href="#demo" class="btn btn-ghost">Demo</a>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<section id="demo" class="application">
+    <div class="row">
+        <h2>Applications</h2>
+        <p class="long-copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit dignissimos fuga dolorum, aperiam repellendus nostrum recusandae ab explicabo dolor vel quas fugiat quidem ex dolorem quasi harum rerum ad ipsa quibusdam corrupti, odit consequuntur! Facilis eaque dignissimos non eos officiis esse laboriosam maiores quam iste facere harum, molestiae minima dolorem?</p>
+    </div>
+    <div class="row">
+        <div class="col span-1-of-3 box">
+            <i class="fas fa-search icon-big"></i>
+            <h3>Basic application</h3>
+            <p class='py'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, architecto asperiores quisquam id voluptate unde!</p>
+            <a href="{{ url_for('basic') }}" class="btn btn-full" style="color: #fff">Demo</a>
+        </div>
+        <div class="col span-1-of-3 box">
+            <i class="fas fa-blind icon-big"></i>
+            <h3>Find Item by Text</h3>
+            <p class='py'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, architecto asperiores quisquam id voluptate unde!</p>
+            <a href="{{ url_for('find_image') }}" class="btn btn-full" style="color: #fff">Demo</a>
+        </div>
+        <div class="col span-1-of-3 box">
+            <i class="fas fa-blind icon-big"></i>
+            <h3>Support blind or visual impaired people</h3>
+            <p class='py'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, architecto asperiores quisquam id voluptate unde!</p>
+            <a href="{{ url_for('support') }}" class="btn btn-full" style="color: #fff">Demo</a>
+        </div>
+        
+        
+    </div>
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <div class="row">
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li><a href="#">About me</a></li>
+                <li><a href="#">About Marianna</a></li>
+            </ul>
+        </div>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-square"></i></a></li>
+                
+            </ul>
+        </div>
+        <div class="row">
+            <p>
+                Copyright &copy; 2020 by Tien Tran.
+            </p>
+        </div>
+    </div>
+</footer>
+{% endblock %}

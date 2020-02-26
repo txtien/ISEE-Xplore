@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block header %}
+<header>
+    <nav id="navbar">
+        <div class="row">
+            <a href="{{ url_for('index')}}"><img src="../static/images/resources/white-logo.png" alt="logo" class="logo"></a>
+            <ul class="main-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+</header> 
+{% endblock %}
+
+{% block content %}
+<div class="main"> 
+    <form method="POST">
+        {{ find_form.hidden_tag() }}
+        {{ find_form.user_input.label(class='basic-label') }} {{ find_form.user_input(class="text-field") }}
+        {{ find_form.find(class='basic-submit') }}
+    </form>
+</div>
+<h1 style='color: #000; text-align: center;'>This is rooms in your house, I will find things for you :). Just type things you want to find in form above</h1>
+<div class="result" style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; grid-gap: 1rem; width: 80%; margin: 0 auto;">
+    {% for filepath in filepaths %}
+    <div><img src={{filepath}} width=500px height=500px alt=""></div>
+    {% endfor %}
+</div>
+{% endblock %}

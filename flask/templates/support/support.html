@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block header %}
+<header>
+    <nav id="navbar">
+        <div class="row">
+            <img src="../static/images/resources/white-logo.png" alt="logo" class="logo">
+            <ul class="main-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Demo</a></li>
+            </ul>
+        </div>
+    </nav>
+</header> 
+{% endblock %}
+
+{% block content %} 
+<div class="basic-main">
+    <img src="{% if filename %}../static/images/{{filename}}{% else %}../static/images/placeholder.jpg{% endif %}" width=500 height=500 alt="image">
+    <form method="POST" enctype=multipart/form-data style='display: {% if not filename %}block{% else %}none{% endif %}'>
+        {{ upload_form.hidden_tag() }}
+        {{ upload_form.image.label(class='basic-label') }} {{ upload_form.image(class='image-field') }}
+        {{ upload_form.submit(class='basic-submit') }}
+    </form>
+    {% if filename %}
+    <a href="{{ url_for('support_begin', filename=filename) }}" style="display: block; text-decoration: none; font-weight: bold; width: 400px; margin: 20px auto;" class='basic-submit'>Start</a>
+    {% endif %}
+</div>
+{% endblock %}
